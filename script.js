@@ -1,7 +1,24 @@
-const player = "Paper";
+let player = "";
 const cpu = computerPlay(3);
 
-function computerPlay(max) {
+
+let playerPlay = prompt("Paper, Rock or Scissors?");
+
+		if (playerPlay.toLowerCase() == "paper")
+		{
+      player = "Paper";
+		}
+    if (playerPlay.toLowerCase() == "rock")
+		{
+      player = "Rock";
+		}
+    if (playerPlay.toLowerCase() == "scissors")
+		{
+      player = "Scissors";
+		}
+
+
+    function computerPlay(max) {
   let tool = Math.floor(Math.random() * max);
   if (tool === 0) {
     return "Rock";
@@ -12,8 +29,7 @@ function computerPlay(max) {
     return "Scissors";
   }
 }
-console.log(player);
-console.log(cpu);
+
 
 function singleRound(player, cpu) {
   if (player == "Rock" && cpu == "Paper") {
@@ -36,8 +52,12 @@ function singleRound(player, cpu) {
   } else {
     return "Draw"
   }
-
 }
+
+console.log(player);
+console.log("vs")
+console.log(cpu);
+console.log("-----------")
 //console.log(computerPlay(3));
 console.log(singleRound(player, cpu));
 //Make your function’s playerSelection parameter case-insensitive (so users can input rock, ROCK, RocK or any other variation).
