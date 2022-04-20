@@ -19,6 +19,7 @@ function game(rounds) {
             {
             player = "Scissors";
             }
+          console.log(player + " vs " + cpu);  
           console.log(playRound(player, cpu));
           console.log(result);
       }
@@ -65,6 +66,7 @@ function playRound(player, cpu) {
     result -= 1;
     return "You Lose! Paper beats Rock"
   } else {
+    result = result;
     return "Draw"
   }
 }
